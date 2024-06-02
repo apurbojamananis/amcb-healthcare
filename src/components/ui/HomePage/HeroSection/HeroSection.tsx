@@ -1,3 +1,4 @@
+
 import { Box, Button, Container, Typography } from "@mui/material";
 import Image from "next/image";
 import assets from "@/assets";
@@ -75,7 +76,7 @@ const HeroSection = () => {
             top: "-30px",
           }}
         >
-          <Image src={assets.svgs.arrow} alt="arrow" width={100} height={100} />
+          <Image src={assets.svgs.arrow} alt="arrow" width={100} height={100} priority={true} />
         </Box>
         <Box
           sx={{
