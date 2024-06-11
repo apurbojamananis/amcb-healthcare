@@ -9,9 +9,11 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
+import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 const TopRatedDoctors = async () => {
   const res = await fetch("http://localhost:5000/api/v1/doctor?page=1&limit=3");
   const { data: doctors } = await res.json();
+  console.log(doctors);
 
   return (
     <Box
@@ -48,7 +50,7 @@ const TopRatedDoctors = async () => {
                   height="140"
                   image={doctor.profilePhoto}
                 />
-                
+
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
                     {doctor.name}
@@ -56,15 +58,30 @@ const TopRatedDoctors = async () => {
                   <Typography variant="body2" color="text.secondary">
                     {doctor.qualification} - {doctor.designation}
                   </Typography>
+                  <Typography variant="body2" color="text.secondary" mt={1}>
+                    <LocationOnOutlinedIcon /> {doctor.address}
+                  </Typography>
                 </CardContent>
-                <CardActions>
-                  <Button size="small">Share</Button>
-                  <Button size="small">Learn More</Button>
+                <CardActions sx={{ justifyContent: "space-between", px: 3, pb: "20px" }}>
+                  <Button size="small">Book Now</Button>
+                  <Button size="small" variant="outlined" sx={{ color: "primary.main" }}>
+                    View Profile
+                  </Button>
                 </CardActions>
               </Card>
             </Grid>
           ))}
         </Grid>
+        <Box
+          sx={{
+            textAlign: "center",
+            mt: 5,
+          }}
+        >
+          <Button variant="outlined" sx={{ color: "primary.main" }}>
+            View All Doctors
+          </Button>
+        </Box>
       </Container>
     </Box>
   );
