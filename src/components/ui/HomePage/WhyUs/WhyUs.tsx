@@ -42,26 +42,27 @@ const WhyUs = () => {
           </Typography>
         </Box>
         <Grid container spacing={2} my={5}>
-          <Grid item md={6} gap={2}>
+          <Grid item md={6} gap={2} pr={2}>
             <Box
               sx={{
                 display: "flex",
                 gap: "15px",
                 backgroundColor: "rgba(245,245,245,1)",
-                padding: "15px",
+                padding: "15px 15px 40px 15px",
                 alignItems: "center",
+                justifyContent: "center",
                 borderRadius: "10px 10px 100px 10px",
               }}
             >
               <Box sx={{ backgroundColor: "#FFFFFF", padding: "10px", borderRadius: "10px" }}>
-                <Image src={servicesData[0].imageSrc} width={50} alt="award" />
+                <Image src={servicesData[0].imageSrc} width={60} alt="award" />
               </Box>
               <Box>
                 <Typography variant="h6" component="h6" fontWeight={600}>
                   {servicesData[0].title}
                 </Typography>
-                <Typography variant="body2" color="primary.body1" fontWeight={300}>
-                  {servicesData[0].title}
+                <Typography variant="body2" color="text.secondary" fontWeight={300}>
+                  {servicesData[0].description}
                 </Typography>
               </Box>
             </Box>
@@ -70,7 +71,7 @@ const WhyUs = () => {
                 display: "flex",
                 gap: "15px",
                 backgroundColor: "rgba(245,245,245,1)",
-                padding: "15px",
+                padding: "15px 15px 40px 15px",
                 alignItems: "center",
                 borderRadius: "10px 100px 10px 10px",
                 margin: "30px 0px",
@@ -83,8 +84,8 @@ const WhyUs = () => {
                 <Typography variant="h6" component="h6" fontWeight={600}>
                   {servicesData[3].title}
                 </Typography>
-                <Typography variant="body2" color="primary.body1" fontWeight={300}>
-                  {servicesData[3].title}
+                <Typography variant="body2" color="text.secondary" fontWeight={300}>
+                  {servicesData[3].description}
                 </Typography>
               </Box>
             </Box>
@@ -93,7 +94,7 @@ const WhyUs = () => {
                 display: "flex",
                 gap: "15px",
                 backgroundColor: "rgba(245,245,245,1)",
-                padding: "15px",
+                padding: "15px 15px 40px 15px",
                 alignItems: "center",
                 borderRadius: "10px 10px 100px 10px",
               }}
@@ -105,8 +106,8 @@ const WhyUs = () => {
                 <Typography variant="h6" component="h6" fontWeight={600}>
                   {servicesData[2].title}
                 </Typography>
-                <Typography variant="body2" color="primary.body1" fontWeight={300}>
-                  {servicesData[2].title}
+                <Typography variant="body2" color="text.secondary" fontWeight={300}>
+                  {servicesData[2].description}
                 </Typography>
               </Box>
             </Box>
@@ -115,7 +116,7 @@ const WhyUs = () => {
                 display: "flex",
                 gap: "15px",
                 backgroundColor: "rgba(245,245,245,1)",
-                padding: "15px",
+                padding: "15px 15px 40px 15px",
                 alignItems: "center",
                 borderRadius: "10px 100px 10px 10px",
                 margin: "30px 0px",
@@ -128,15 +129,15 @@ const WhyUs = () => {
                 <Typography variant="h6" component="h6" fontWeight={600}>
                   {servicesData[3].title}
                 </Typography>
-                <Typography variant="body2" color="primary.body1" fontWeight={300}>
-                  {servicesData[3].title}
+                <Typography variant="body2" color="text.secondary" fontWeight={300}>
+                  {servicesData[3].description}
                 </Typography>
               </Box>
             </Box>
           </Grid>
-          <Grid item md={6}>
-            <Box sx={{ margin: "0 auto" }}>
-              <Image src={chooseUsImg} width={400} alt="choose us img" />
+          <Grid item md={6} sx={{ display: "flex", justifyContent: "center" }}>
+            <Box>
+              <Image src={chooseUsImg} width={480} alt="choose us img" />
             </Box>
           </Grid>
         </Grid>
